@@ -1,10 +1,51 @@
-/* Lautlos, Lauter / Leiser Button, Standby */
-
 #device-border {
     height:510px;
     width: 250px;
     border-radius: 40px;
     background-color: #000;
+    top: -150px;
+    left: 3px;
+    position: relative;
+}
+
+#mute-btn {
+    height: 30px;
+    width: 6px;
+    background-color: #474C4F;
+    border-radius: 3px;
+    top: 70px;
+    left: 3px;
+    position: relative;
+}
+
+#louder {
+    height: 40px;
+    width: 6px;
+    background-color: #474C4F;
+    border-radius: 3px;
+    top: 85px;
+    left: 3px;
+    position: relative;
+}
+
+#quieter {
+    height: 40px;
+    width: 6px;
+    background-color: #474C4F;
+    border-radius: 3px;
+    top: 50px;
+    left: 3px;
+    position: relative;
+}
+
+#standby {
+    height: 40px;
+    width: 6px;
+    background-color: #474C4F;
+    border-radius: 3px;
+    top: 53px;
+    left: 253px;
+    position: relative;
 }
 
 #front-cam {
