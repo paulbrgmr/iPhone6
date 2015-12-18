@@ -1,0 +1,112 @@
+.iphone-wrapper {
+    transform: scale(1);
+    $iphone-height: 260px;
+    $iphone-width: $iphone-height * 2;
+    $mute-width: 24px;
+    $mute-height: $mute-width / 5;
+    $volume-width: $mute-width * 1.2;
+    $volume-height: $mute-height;
+    $standby-width: $volume-width;
+    $standby-height: $mute-height;
+    $display-width: $iphone-width - 120;
+    $display-height: $iphone-height - 16;
+    $homebutton-size: 40px;
+    $front-camera-size: 14px;
+    $ear-speaker-width: 8px;
+    $ear-speaker-height: $ear-speaker-width * 6;
+    $btn-color: lighten(#000, 35%);
+    position: relative;
+    top: 50px;
+    width: $iphone-width;
+    height: $iphone-height;
+    margin-left: auto;
+    margin-right: auto;
+    // transform: rotate(-90deg);
+    .mute {
+        width: $mute-width;
+        height: $mute-height;
+        background-color: $btn-color;
+        position: absolute;
+        z-index: 0;
+        border-radius: $mute-height;
+        top: -($mute-height / 2);
+        right: 60px;
+    }
+    .louder, .quieter {
+        background-color: $btn-color;
+        position: absolute;
+        z-index: 0;
+        width: $volume-width;
+        height: $volume-height;
+        border-radius: $volume-height;
+        top: -($volume-height / 2);
+    }
+    .louder {
+        right: 110px;
+    }
+    .quieter {
+        right: 145px;
+    }
+    .standby {
+        background-color: $btn-color;
+        position: absolute;
+        height: $standby-height;
+        width: $standby-width;
+        border-radius: $standby-height;
+        bottom: -3px;
+        z-index: 0;
+        right: 110px;
+    }
+    .iphone {
+        width: $iphone-width;
+        height: $iphone-height;
+        border-radius: 40px;
+        position: absolute;
+        background-color: #000;
+        .homebutton {
+            width: $homebutton-size;
+            height: $homebutton-size;
+            position: absolute;
+            top: ($iphone-height / 2) - ($homebutton-size / 2) - 1;
+            left: 10px;
+            border: 2px solid lighten(#000, 15%);
+            border-radius: 100%;
+        }
+        .display {
+            width: $display-width;
+            height: $display-height;
+            left: ($iphone-width / 2) - ($display-width / 2) - 1;
+            top: ($iphone-height / 2) - ($display-height / 2) - 1;
+            position: absolute;
+            border-radius: 3px;
+            background-color: lighten(#000, 20%);
+        }
+        .front-camera {
+            width: $front-camera-size;
+            height: $front-camera-size;
+            position: absolute;
+            border: 1px solid lighten(#000, 25%);
+            border-radius: 100%;
+            right: ((($iphone-width / 2) - ($display-width / 2)) / 2) - ($front-camera-size / 2);
+            top: (($iphone-height / 2) - ($front-camera-size / 2) - 1) - ($front-camera-size * 3);
+        }
+        .ear-speaker {
+            width: $ear-speaker-width;
+            height: $ear-speaker-height;
+            position: absolute;
+            border: 1px solid lighten(#000, 20%);
+            border-radius: $ear-speaker-width;
+            right: ((($iphone-width / 2) - ($display-width / 2)) / 2) - ($ear-speaker-width / 2);
+            top: (($iphone-height / 2) - ($front-camera-size / 2)) - ($ear-speaker-height / 2.75);
+        }
+    }
+    .heading-text {
+        position: absolute;
+        z-index: 5;
+        left: 70px;
+        top: 80px;
+        font-size: 40px;
+        // left: $iphone-width / 2;
+        // top: $iphone-height / 2; 
+    }
+}
